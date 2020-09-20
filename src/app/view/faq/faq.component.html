@@ -1,0 +1,9 @@
+<div class="container">
+
+  <h1>Have a question? We can help</h1>
+
+  <app-question-card *ngFor="let question of questions$ | async"
+                     data-test="question-item"
+                     [question]="question"></app-question-card>
+
+</div>

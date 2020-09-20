@@ -1,0 +1,66 @@
+@import "variables";
+@import "fonts";
+@import "mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  color: $black;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  margin: 2rem auto;
+  display: grid;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-family: 'Oswald-bold', sans-serif;
+  letter-spacing: 0.05rem;
+  border-bottom: 4px solid $black;
+  text-transform: uppercase;
+  @include mq('tablet', min) {
+    font-size: 1.8em;
+  }
+  @include mq('tablet-wide', min) {
+    font-size: 2.5em;
+    border-bottom: 15px solid $black;
+  }
+}
+
+h2 {
+  font-size: 1.3em;
+  margin: 0.3rem;
+  font-family: 'Oswald-bold', sans-serif;
+  @include mq('tablet-wide', min) {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  font-family: 'Oswald-bold', sans-serif;
+  @include mq('tablet-wide', min) {
+    font-size: 1.17em;
+  }
+}
+
+h4 {
+  font-family: 'Oswald-light', sans-serif;
+  font-size: 0.95em;
+  letter-spacing: 0.04rem;
+  @include mq('tablet-wide', min) {
+    font-size: 1.1em;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  width: 1000px;
+}

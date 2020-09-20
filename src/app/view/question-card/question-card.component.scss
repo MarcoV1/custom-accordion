@@ -1,0 +1,63 @@
+@import "src/assets/mixins";
+@import "src/assets/variables";
+
+.question-card {
+  border-bottom: 2px solid $black;
+
+  @include mq('tablet', min) {
+    border-bottom: 4px solid $black;
+  }
+
+  &-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0.5rem;
+    @include mq('tablet', min) {
+      padding: 1rem;
+    }
+
+    h3 {
+      @include mq('tablet', min) {
+        margin-left: 2.5rem;
+      }
+    }
+
+    &.active {
+      background-color: darkgrey;
+      transition: 400ms;
+    }
+  }
+
+  &-answer {
+    h4 {
+      margin: 1rem 2rem;
+    }
+  }
+}
+
+.toggle-icon {
+  background-color: rgba(232, 186, 17, 1);
+  margin-left: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.svg-rotate__icon {
+  padding: 0.75rem;
+
+  &.expand-answer {
+    transform: rotate(45deg);
+    transition: 300ms;
+  }
+
+  &.collapse-answer {
+    transition: 300ms;
+  }
+
+}
+
+

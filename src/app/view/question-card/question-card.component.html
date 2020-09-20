@@ -1,0 +1,19 @@
+<div class="question-card">
+  <div class="question-card-header" [ngClass]="{'active' : showAnswer}">
+    <h2 data-test="q-id">Q{{ question.id }}</h2>
+    <h3 data-test="q-question">{{ question.question }}</h3>
+
+    <div class="toggle-icon" (click)="toggle()">
+      <svg class="svg-rotate__icon" [ngClass]="showAnswer ? 'expand-answer' : 'collapse-answer'"
+           width="40px" height="40px" viewBox="0 0 357 357">
+        <g id="add">
+          <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="question-card-answer" [@questionCollapse]="!showAnswer ? 'initial' : 'final'">
+    <h4 data-test="q-answer">{{ question.answer }}</h4>
+  </div>
+</div>
